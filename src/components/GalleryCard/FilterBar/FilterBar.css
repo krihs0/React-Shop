@@ -1,0 +1,55 @@
+.filterBar{
+    position: fixed;
+    height: min(10rem, 20vh);
+    background: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,0.1);
+    border:0.2rem solid rgba(255,255,255,0.2);
+}
+
+.filterBarWrapper{
+    width: 60vw;
+    display:  flex;
+    margin: 0 auto;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.filterBarInputWrapper{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.filterBarInputWrapper > input{
+    appearance: none;
+}
+
+.filterBarInputWrapper > label{
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    background: linear-gradient(to bottom right, white, grey);
+    color: black;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.filterBarInputWrapper > input:checked + label{
+    border: 0.3rem solid rgb(68, 68, 68);
+    box-shadow: 0 0 1.2rem 0 rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 43.75rem) {
+    .filterBarWrapper{
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .filterBar{
+        height: auto;
+        padding: 2rem;
+    }
+}
